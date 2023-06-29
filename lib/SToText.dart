@@ -23,6 +23,8 @@ class _SToTextState extends State<SToText> {
   //text to speech
   TextToSpeech tts = TextToSpeech();
 
+  String API_KEY = "Enter your API_KEY";
+
   @override
   void initState() {
     super.initState();
@@ -73,7 +75,7 @@ class _SToTextState extends State<SToText> {
       uri,
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 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",
+        "Authorization": "Bearer ${API_KEY}",
       },
       body: json.encode(body),
     );
